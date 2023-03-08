@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/app.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pouchdb/8.0.1/pouchdb.js"></script>
+    <title>Document</title>
+</head>
+<body id="root">
+    
+    <aside id="menu">
+        <section class="container">
+            <li class="link text">Mensajes</li>
+            <li class="link text">Contactos</li>
+            <li class="link text">Perfil</li>
+            <li class="link text">Salir</li>
+        </section>
+    </aside>
+    
+    <nav id="cards">
+        <div id="search">
+            <input type="text" placeholder="buscar en contactos">
+            <button>find</button>
+        </div>
+        <section id="inbox">
+            <article id="pepito">
+                <h2>pepito</h2>
+                <h4>me:</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </article>
+        </section>
+    </nav>
+
+    <main id="chat">
+        <section id="target">
+            <div class="profile-photo"></div>
+            <h1 class="contact-name">nombre del contacto</h1>
+            <!-- <div class="burguer">
+                <span>xd</span>
+            </div> -->
+        </section>
+        <section id="messages" >
+            <article class="message mine">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <p>Quae, repellendus omnis! Cupiditate, molestiae officia suscipit maxime obcaecati numquam.</p>
+                <p>Dignissimos ratione alias inventore, repudiandae cumque culpa nam quia ipsum assumenda ullam.</p>
+            </article>
+            <article class="message">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <p>Quae, repellendus omnis! Cupiditate, molestiae officia suscipit maxime obcaecati numquam.</p>
+                <p>Dignissimos ratione alias inventore, repudiandae cumque culpa nam quia ipsum assumenda ullam.</p>
+            </article>
+        </section>
+        <section id="write" class="">
+            <form action="" class="write-form">
+                <input id="text-message" class="write-message" type="text" placeholder="texto entrada">
+                <button id="send" class="btn btn-join">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="app/index.js" type="module"></script>
+</body>
+</html>

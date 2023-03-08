@@ -1,0 +1,85 @@
+@use  'base/mixins' as mix;
+
+#chat{
+    @include mix.desktop{
+        grid-area: chat;
+    }    
+    display: grid;
+    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-areas: "target"
+                         "messages"
+                         "text";
+    position: relative;
+    z-index: 9;
+    background-color: antiquewhite;
+}
+
+
+#target{
+    grid-area: "target";
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    height: 10vh;
+    background-color: violet;
+    padding: 0 1rem 0 1rem;
+    h1{
+       
+        text-align: start;
+    }
+    .profile-photo{
+        height: 6rem;
+        width: 6rem; 
+        background-image: url('../assets/usuario.png');
+        background-size: 6rem;
+        background-color: aliceblue;
+        border-radius: 50%;
+    }
+    .contact-name{
+        font-size: 2rem;
+    }
+}
+
+#messages{
+    grid-area: "messages";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.message{
+    width: 70%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    background-color: aqua;
+    border-radius: 1rem;
+    transform: translateX(10%);
+    &.mine{
+        background-color: aquamarine;
+        transform: translateX(-10%);
+    }
+}
+
+#write{
+    background-color: blue;
+    grid-area: "text";
+}
+
+.write-form{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 85% 15%;
+    padding: 2rem;
+    *{
+    border: transparent;
+    }
+    .write-message{
+        padding: 1rem;
+        border-radius: 10px 0 0 10px;
+    }
+    .btn-join{
+        border-radius: 0 10px 10px 0;
+    }
+}

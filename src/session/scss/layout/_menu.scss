@@ -1,0 +1,37 @@
+@use 'base/mixins' as mix;
+
+#menu{
+    display: none;
+    grid-area: unset;
+    @include mix.desktop{
+        display: flex;
+        grid-area: menu;
+        width: 100%;
+        position: relative;
+        z-index: 10;
+        section{
+            width: inherit;
+            height: 100vh;
+        }
+    }
+}
+
+.hidden{
+    transform: translateX(-40vw);
+}
+.container{
+    background:rgb(92, 92, 92);
+    border: transparent;
+    box-shadow:2px 0px 10px rgb(55, 54, 54);
+    li{
+        cursor: pointer;
+        list-style: none;
+        font-size: 2.5rem;
+        padding: 1rem;
+        text-align: center;
+        transition: 0.6s ease;
+    }
+    li:hover{
+        background-color: aliceblue;
+    }
+}

@@ -1,0 +1,25 @@
+@use 'base/vars';
+@use 'base/mixins' as mix;
+
+#cards{
+    display: none;
+    grid-area: unset;
+    @include mix.desktop{
+        grid-area: info;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+}
+
+#inbox{
+    
+    article{
+        margin: 1rem 0;
+        padding: 1rem;
+        width: 28vw;
+        border-radius: 5px;
+        background-color: red;
+    }
+}
